@@ -1,0 +1,89 @@
+{
+    "id": "com.sap.sample.guage",
+    "version": "1.0.0",
+    "name": "Guage",
+    "description": "A Guage",
+    "newInstancePrefix": "Guage",
+    "icon": "https://bhargavab8.github.io/Guage1/Guage.png",
+    "vendor": "SAP",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+			"tag": "com-sample-guage",
+            "url": "https://bhargavab8.github.io/Guage1/Guage.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "styling",
+            "tag": "com-sample-guage-styling",
+            "url": "https://bhargavab8.github.io/Guage1/Guage_Styling.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "builder",
+            "tag": "com-sample-guage-builder",
+            "url": "https://bhargavab8.github.io/Guage1/Guage_builder.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "label": {
+            "type": "string",
+            "description": "Label for Guage",
+            "default": "Guage"
+        },
+        "value": {
+            "type": "number",
+            "description": "guage value",
+            "default": 1
+        },
+        "width": {
+            "type": "integer",
+            "default": 100
+        },
+        "height": {
+            "type": "integer",
+            "default": 100
+        }
+    },
+    "methods": {
+        "setlabel": {
+            "description": "Sets the guage label.",
+            "parameters": [
+                {
+                    "name": "newlabel",
+                    "type": "string",
+                    "description": "The new guage label"
+                }
+            ],
+            "body": "this.label = newlabel;"
+        },
+        "setvalue": {
+            "description": "Sets the guage value.",
+            "parameters": [
+                {
+                    "name": "newvalue",
+                    "type": "number",
+                    "description": "The new guage value"
+                }
+            ],
+            "body": "this.value = newvalue;"
+        },		
+        "getvalue": {
+            "returnType": "number",
+            "description": "Returns the guage value.",
+            "body": "return this.value;"
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the Box."
+        }
+    }
+}
+ 
