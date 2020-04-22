@@ -360,7 +360,7 @@ google.v.w.H.Cn=function(b){if(typeof b===I)try{if(""!==b)for(var c=JSON.parse(b
 
         var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          [props.label, props.value],
+          [myprops.label, myprops.value],
           
         ]);
 
