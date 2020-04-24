@@ -359,8 +359,8 @@
 		}
 
 		onCustomWidgetAfterUpdate(changedProperties) {
-			console.log("onCustomWidgetAfterUpdate")
-			console.log("this._props prop = ", this._props);
+			//console.log("onCustomWidgetAfterUpdate")
+			//console.log("this._props prop = ", this._props);
 			this._props = { ...this._props, ...changedProperties };
 
 			var ctx = this.shadowRoot.getElementById('chart_div');
@@ -371,10 +371,10 @@
 			google.charts.setOnLoadCallback(function() {
 				drawChart(myProps);
 			});
-			console.log("changedProperties = ", changedProperties);
+			//console.log("changedProperties = ", changedProperties);
 
 			function drawChart(props) {
-				console.log("props =", props)
+				//console.log("props =", props)
 				var data = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
 				[props.label, props.value]
