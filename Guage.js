@@ -362,12 +362,12 @@
 			
 			this._props = { ...this._props, ...changedProperties };
 
-			var ctx = this.shadowRoot.getElementById('chart_div');
+			//var ctx = this.shadowRoot.getElementById('chart_div');
 
-			//var props = this._props
+			var myprops = this._props
 			
 			google.charts.load('current', {'packages':['gauge']});
-			google.charts.setOnLoadCallback(drawChart(props));
+			google.charts.setOnLoadCallback(drawChart(myprops));
 
 			function drawChart(props) {
 				
@@ -390,8 +390,7 @@
 				minorTicks: 5
 				};
 
-				var chart = new google.visualization.Gauge(ctx);
-
+				var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
 				chart.draw(data, options);
 			}
 		}
