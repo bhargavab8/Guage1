@@ -360,13 +360,9 @@ google.v.w.H.Cn=function(b){if(typeof b===I)try{if(""!==b)for(var c=JSON.parse(b
 		onCustomWidgetAfterUpdate(changedProperties) {
 			
 			this._props = { ...this._props, ...changedProperties };
-
-			var ctx = this.shadowRoot.getElementById('chart_div');
-
-			var myProps = this._props
-			
+		
 			google.charts.load('current', {'packages':['gauge']});
-			 google.charts.setOnLoadCallback(drawChart);
+			google.charts.setOnLoadCallback(drawChart);
 
 			function drawChart(props) {
 
@@ -384,12 +380,9 @@ google.v.w.H.Cn=function(b){if(typeof b===I)try{if(""!==b)for(var c=JSON.parse(b
 					position: 'top'
 					},
 					width: '100%',
-				redFrom: props.redFrom, redTo: props.redTo,
-				yellowFrom:props.yellowFrom, yellowTo: props.yellowTo,
-				minorTicks: 5
-				};
+					};
 
-				var chart = new google.visualization.Gauge(ctx);
+				 var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
 
 				chart.draw(data, options);
 			}
