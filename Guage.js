@@ -364,7 +364,7 @@ google.v.w.H.Cn=function(b){if(typeof b===I)try{if(""!==b)for(var c=JSON.parse(b
 			google.charts.load('current', {'packages':['gauge']});
 			google.charts.setOnLoadCallback(drawChart);
 
-			function drawChart(props) {
+			function drawChart() {
 
 			var data = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
