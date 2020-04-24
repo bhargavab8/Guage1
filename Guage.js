@@ -359,8 +359,7 @@
 		}
 
 		onCustomWidgetAfterUpdate(changedProperties) {
-			//console.log("onCustomWidgetAfterUpdate")
-			//console.log("this._props prop = ", this._props);
+			
 			this._props = { ...this._props, ...changedProperties };
 
 			var ctx = this.shadowRoot.getElementById('chart_div');
@@ -368,13 +367,10 @@
 			var myProps = this._props
 			
 			google.charts.load('current', {'packages':['gauge']});
-			google.charts.setOnLoadCallback(function() {
-				drawChart(myProps);
-			});
-			//console.log("changedProperties = ", changedProperties);
+			google.charts.setOnLoadCallback(drawChart);
 
 			function drawChart(props) {
-				//console.log("props =", props)
+				
 				var data = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
 				[props.label, props.value]
@@ -382,7 +378,7 @@
 
 				var options = {
 				chartArea: {
-					// leave room for y-axis labels
+				
 					width: '94%'
 					},
 					legend: {
