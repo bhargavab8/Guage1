@@ -364,7 +364,7 @@
 
 			var ctx = this.shadowRoot.getElementById('chart_div');
 
-			var myProps = this._props
+			var props = this._props
 			
 			google.charts.load('current', {'packages':['gauge']});
 			google.charts.setOnLoadCallback(drawChart);
