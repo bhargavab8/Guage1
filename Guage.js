@@ -362,7 +362,7 @@
 			
 			this._props = { ...this._props, ...changedProperties };
 
-			//var ctx = this.shadowRoot.getElementById('chart_div');
+			var ctx = this.shadowRoot.getElementById('chart_div');
 
 			var myprops = this._props
 			
@@ -390,7 +390,7 @@
 				minorTicks: 5
 				};
 
-				var chart = new google.visualization.Gauge(this.shadowRoot.getElementById('chart_div'));
+				var chart = new google.visualization.Gauge(ctx);
 				chart.draw(data, options);
 			}
 		}
