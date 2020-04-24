@@ -367,7 +367,9 @@
 			var myprops = this._props
 			
 			google.charts.load('current', {'packages':['gauge']});
-			google.charts.setOnLoadCallback(drawChart(myprops));
+			google.charts.setOnLoadCallback(function() {
+				drawChart(myProps);
+			});
 
 			function drawChart(props) {
 				
