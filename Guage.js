@@ -390,7 +390,7 @@
 				minorTicks: 5
 				};
 
-				var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+				var chart = new google.visualization.Gauge(this.shadowRoot.getElementById('chart_div'));
 				chart.draw(data, options);
 			}
 		}
