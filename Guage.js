@@ -368,7 +368,7 @@
 			
 			google.charts.load('current', {'packages':['gauge']});
 			google.charts.setOnLoadCallback(function() {
-				drawChart(myProps);
+				drawChart(myprops);
 			});
 
 			function drawChart(props) {
