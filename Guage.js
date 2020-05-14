@@ -8,15 +8,7 @@
 					display: block;
 				} 
 			</style> 
-		<script type="text/javascript"> 
-       		 var script = document.createElement('script'); 
-          
-       		 script.src = "https://www.gstatic.com/charts/loader.js"; 
-          
-        document.head.appendChild(script) 
-    </script>
-			<div id="chart_div"></div>
-		`;
+		<div id="chart_div"></div>`;
 
 	class GoogleGauge extends HTMLElement {
 		constructor() {
@@ -29,6 +21,16 @@
 			});
 			this._props = {};
 		}
+		function () {
+			const script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.async = true;
+       		 script.src = "https://www.gstatic.com/charts/loader.js"; 
+          
+        document.head.appendChild(script) 
+		}
+		  		
+    
 
 		connectedCallback(){
 			
