@@ -1,6 +1,11 @@
 (function() { 
-	import "https://www.gstatic.com/charts/loader.js";
-
+	
+	const script = document.createElement('script');
+                script.type = 'text/javascript';	
+	script.src = 'https://www.gstatic.com/charts/loader.js';
+                
+                document.head.appendChild(script);
+	
 	let template = document.createElement("template");
 	template.innerHTML = `
 			<style>
