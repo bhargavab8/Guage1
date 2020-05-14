@@ -14,7 +14,7 @@
        		 script.src = "https://www.gstatic.com/charts/loader.js"; 
           
         document.head.appendChild(script) 
-    </script
+    </script>
 			<div id="chart_div"></div>
 		`;
 
