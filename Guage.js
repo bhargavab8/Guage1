@@ -1,11 +1,6 @@
 (function() { 
 	
-	const script = document.createElement('script');
-                script.type = 'text/javascript';	
-	script.src = 'https://www.gstatic.com/charts/loader.js';
-                
-                document.head.appendChild(script);
-	
+
 	let template = document.createElement("template");
 	template.innerHTML = `
 			<style>
@@ -13,6 +8,13 @@
 					display: block;
 				} 
 			</style> 
+		<script type="text/javascript"> 
+       		 var script = document.createElement('script'); 
+          
+       		 script.src = "https://www.gstatic.com/charts/loader.js"; 
+          
+        document.head.appendChild(script) 
+    </script
 			<div id="chart_div"></div>
 		`;
 
