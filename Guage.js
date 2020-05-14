@@ -1,5 +1,5 @@
 (function() { 
-	src="https://www.gstatic.com/charts/loader.js"
+	import "https://www.gstatic.com/charts/loader.js";
 
 	let template = document.createElement("template");
 	template.innerHTML = `
