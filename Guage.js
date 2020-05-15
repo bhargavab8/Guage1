@@ -32,7 +32,7 @@
                     gLibLoaded = true;
                     
                     if(val!==''){
-                        var ctx = this.shadowRoot.getElementById('chart_div');
+                        var ctx = this.shadowRoot.getElementById("chart_div");
                       
                         google.charts.load('current', {'packages':['gauge']});
                         google.charts.setOnLoadCallback(function() {
