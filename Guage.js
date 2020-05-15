@@ -28,7 +28,10 @@
  
                 const script = document.createElement('script');
                 script.type = 'text/javascript';
-                script.async = true;
+				script.async = true;
+				script.onload= function () {
+									
+				}
 
                 script.src = 'https://www.gstatic.com/charts/loader.js';
                 //Append it to the document header
@@ -42,7 +45,7 @@
 
         onCustomWidgetAfterUpdate(changedProperties) {
             this._props = { ...this._props, ...changedProperties };
-           
+
 	    	
         }
     }
