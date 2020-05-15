@@ -32,8 +32,7 @@
                     gLibLoaded = true;
                     
                     if(val!==''){
-                        var ctx = this.shadowRoot.getElementById("chart_div");
-                      
+                  
                         google.charts.load('current', {'packages':['gauge']});
                         google.charts.setOnLoadCallback(function() {
                             drawChart(val);
@@ -59,7 +58,8 @@
                             yellowFrom:props.yellowFrom, yellowTo: props.yellowTo,
                             minorTicks: 5
                             };
-            
+                            const ctx = document.querySelector(".sapCustomWidgetWebComponent").shadowRoot.querySelector("#chart_div");
+                                                                
                             var chart = new google.visualization.Gauge(ctx);
                             chart.draw(data, options);
                         }                           
