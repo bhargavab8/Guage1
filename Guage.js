@@ -12,7 +12,8 @@
 	let script = document.createElement("script");
 	script.type = 'text/javascript';
     script.async = true;
-    script.src = "https://www.gstatic.com/charts/loader.js";
+	script.src = "https://bhargavab8.github.io/Guage1/Google.js";
+	document.head.appendChild(script);
 
 	class GoogleGauge extends HTMLElement {
 		constructor() {
