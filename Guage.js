@@ -76,6 +76,7 @@
         }
 
         onCustomWidgetAfterUpdate(changedProperties) {
+            this._props = { ...this._props, ...changedProperties };
             var myprops = this._props
 	        this.render(myprops);
 	    	
