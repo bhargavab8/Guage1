@@ -50,8 +50,8 @@
                                     position: 'top'
                                     },
                                     width: '100%',
-                                redFrom: props.redFrom, redTo: props.redTo,
-                                yellowFrom:props.yellowFrom, yellowTo: props.yellowTo,
+                                redFrom: val.redFrom, redTo: val.redTo,
+                                yellowFrom:val.yellowFrom, yellowTo: val.yellowTo,
                                 minorTicks: 5
                                 };
                                 const ctx = document.querySelector(".sapCustomWidgetWebComponent").shadowRoot.querySelector("#chart_div");
