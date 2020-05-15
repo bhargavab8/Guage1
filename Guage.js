@@ -9,10 +9,14 @@
 			</style> 
 		<div id="chart_div"></div>`;
 
+	let googleloaderjs = document.createElement("script");
+    googleloaderjs.src = "https://www.gstatic.com/charts/loader.js";
+
 	class GoogleGauge extends HTMLElement {
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
+			shadowRoot.appendChild(googleloaderjs);
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
